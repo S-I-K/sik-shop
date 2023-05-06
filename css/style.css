@@ -1,0 +1,111 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
+/* variable */
+.kr {
+  font-family: "SUIT Variable", sans-serif !important;
+}
+
+.en {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 1560px;
+  height: 100%;
+  border: 1px solid plum;
+}
+
+#wrap {
+  width: 100%;
+  height: 4000px;
+}
+#wrap .intro {
+  width: 100%;
+  height: 100vh;
+  border: 1px solid plum;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#wrap .intro .text-area {
+  position: absolute;
+  z-index: 2;
+}
+#wrap .intro .text-area .word {
+  display: flex;
+  justify-content: space-between;
+}
+#wrap .intro .text-area .word span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.05em;
+  color: rgba(255, 255, 255, 0.8);
+}
+#wrap .intro .text-area .title-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#wrap .intro .text-area .title-area .title {
+  color: #fff;
+  font-size: 64px;
+  line-height: 78px;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px 140px;
+}
+#wrap .intro .text-area .title-area span {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.05em;
+  color: rgba(255, 255, 255, 0.8);
+}
+#wrap .intro #intro-slide {
+  width: 100%;
+  height: 100%;
+}
+#wrap .intro #intro-slide .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+#wrap .intro #intro-slide .swiper-wrapper .swiper-slide .bg-area {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#wrap .intro #intro-slide .swiper-wrapper .swiper-slide .bg-area img {
+  width: auto;
+  height: 100%;
+}
+#wrap .intro #intro-slide .swiper-wrapper .swiper-slide .bg-area::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,117 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+/* variable */
+$kr-font: 'SUIT Variable', sans-serif;
+$en-font: 'Montserrat', sans-serif;
+.kr { font-family: $kr-font !important; }
+.en { font-family: $en-font !important; }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style: none;
+}
+
+.container {
+    width: 1560px;
+    height: 100%;
+    border: 1px solid plum;
+}
+
+#wrap {
+    width: 100%;
+    height: 4000px;
+
+    .intro {
+        width: 100%;
+        // height: 800px;
+        height: 100vh;
+        border: 1px solid plum;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .text-area{
+            position: absolute;
+            z-index: 2;
+            .word {
+                // border: 1px solid red;
+                display: flex;
+                justify-content: space-between;
+                span {
+                    font-family: $kr-font;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 26px;
+                    letter-spacing: -.05em;
+                    color: rgba(255, 255, 255, .8);
+                }
+            }
+            .title-area {
+                // width: 480px;
+                // border: 1px solid red;
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                .title {
+                    color: #fff;
+                    font-size: 64px;
+                    line-height: 78px;
+                    font-weight: 900;
+                    font-family: $en-font;
+                    background: rgba(0, 0, 0, 0.1); 
+                    padding: 10px 140px;
+                }
+                span {
+                    font-family: $kr-font;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 26px;
+                    letter-spacing: -.05em;
+                    color: rgba(255, 255, 255, .8);
+                }
+            }
+        }
+
+        #intro-slide {
+            width: 100%;
+            height: 100%;
+            .swiper-wrapper {
+                .swiper-slide {
+                    width: 100%;
+                    height: 100%;
+                    .bg-area {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        overflow: hidden;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img {
+                            width: auto;
+                            height: 100%;
+                        }
+                    }
+                    .bg-area::after {
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        background: rgba(0, 0, 0, 0.2);
+                    }
+                }
+            }
+        }
+    }
+}
