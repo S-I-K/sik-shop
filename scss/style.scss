@@ -112,6 +112,10 @@ li {
                     }
                 }
             }
+            .swiper-pagination {
+                top: auto;
+                bottom: 0;
+            }
         }
     }
 }

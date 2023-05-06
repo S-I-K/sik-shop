@@ -109,3 +109,7 @@ li {
   position: absolute;
   background: rgba(0, 0, 0, 0.2);
 }
+#wrap .intro #intro-slide .swiper-pagination {
+  top: auto;
+  bottom: 0;
+}
