@@ -27,17 +27,71 @@ li {
 .container {
   width: 1560px;
   height: 100%;
-  border: 1px solid plum;
 }
 
 #wrap {
   width: 100%;
   height: 4000px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+#wrap header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  padding: 40px 0;
+}
+#wrap header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#wrap header .container .logo {
+  width: 150px;
+  border: 1px solid #000;
+}
+#wrap header .container .menu-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#wrap header .container .menu-list li a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+}
+#wrap header .container .menu-list li:not(:last-child) {
+  margin-right: 30px;
+}
+#wrap header .container .icon-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#wrap header .container .icon-list li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+#wrap header .container .icon-list li a img {
+  width: 100%;
+}
+#wrap header .container .icon-list li:not(:last-child) {
+  margin-right: 30px;
 }
 #wrap .intro {
   width: 100%;
   height: 800px;
-  border: 1px solid plum;
   position: relative;
   display: flex;
   align-items: center;
@@ -112,4 +166,107 @@ li {
 #wrap .intro #intro-slide .swiper-pagination {
   top: auto;
   bottom: 0;
+}
+#wrap .collection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 200px;
+}
+#wrap .collection .container {
+  padding: 0 132px;
+}
+#wrap .collection .container .collection-about {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+#wrap .collection .container .collection-about .collection-thumb {
+  width: 526px;
+  height: 640px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+#wrap .collection .container .collection-about .collection-thumb img {
+  width: 100%;
+}
+#wrap .collection .container .collection-about .collection-thumb::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(242.86deg, rgba(255, 255, 255, 0.8) 14.35%, rgba(255, 255, 255, 0) 56.79%, rgba(255, 255, 255, 0) 56.8%), url(642a7428e788f8.jpg);
+}
+#wrap .collection .container .collection-about .collection-text-box {
+  width: calc(100% - 526px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: end;
+  padding: 0 0 50px 40px;
+}
+#wrap .collection .container .collection-about .collection-text-box .collection-title-box {
+  margin-bottom: 40px;
+  transform: translateX(-171px);
+}
+#wrap .collection .container .collection-about .collection-text-box .collection-title-box .title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 123px;
+  font-weight: 900;
+  line-height: 123px;
+  color: #061E02;
+}
+#wrap .collection .container .collection-about .collection-text-box .collection-title-box .sub-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 52px;
+  color: #312E18;
+}
+#wrap .collection .container .collection-about .collection-text-box .desc {
+  width: 100%;
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 34px;
+  letter-spacing: -0.05em;
+  color: #141415;
+  margin-bottom: 40px;
+}
+#wrap .collection .container .collection-about .collection-text-box .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #061E02;
+  padding: 10px 36px;
+  border: 1px solid #061E02;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+#wrap .collection .container .collection-about .collection-text-box .btn img {
+  position: absolute;
+  width: 10px;
+  right: 24px;
+  transition: all 0.4s ease-in-out;
+}
+#wrap .collection .container .collection-about .collection-text-box .btn:hover {
+  background: #061E02;
+  color: #fff;
+  transition: all 0.4s ease-in-out;
+}
+#wrap .collection .container .collection-about .collection-text-box .btn:hover img {
+  right: 10px;
+  transition: all 0.4s ease-in-out;
 }
