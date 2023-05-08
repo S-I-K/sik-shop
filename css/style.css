@@ -581,3 +581,55 @@ li {
   transform: translateX(0px);
   transition: all 0.8s ease-in-out;
 }
+#wrap .notice {
+  width: 100%;
+  padding-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#wrap .notice .container {
+  border: 1px solid red;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 500px;
+}
+#wrap .notice .container .faq {
+  width: 50%;
+}
+#wrap .notice .container .faq .title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 59px;
+  color: #5C734C;
+  border-bottom: 2px solid #1b320a;
+  margin-bottom: 20px;
+}
+#wrap .notice .container .faq .faq-wrap .faq-list {
+  padding: 0 0 20px 34px;
+  border-bottom: 1px solid #d9d9d9;
+}
+#wrap .notice .container .faq .faq-wrap .faq-list .faq-q {
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.05em;
+  color: #141415;
+  cursor: pointer;
+}
+#wrap .notice .container .faq .faq-wrap .faq-list .faq-q .faq-a {
+  margin-top: 17px;
+  width: 545px;
+  font-family: "SUIT Variable", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.05em;
+  color: #4f4f4f;
+}
+#wrap .notice .container .news {
+  width: 50%;
+}

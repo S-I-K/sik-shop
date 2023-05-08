@@ -643,4 +643,60 @@ li {
             }
         }
     }
+
+    .notice {
+        width: 100%;
+        padding-top: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .container {
+            border: 1px solid red;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            height: 500px;
+            .faq {
+                width: 50%;
+                .title {
+                    font-family: $en-font;
+                    font-weight: 900;
+                    font-size: 48px;
+                    line-height: 59px;
+                    color: #5C734C;
+                    border-bottom: 2px solid #1b320a;
+                    margin-bottom: 20px;
+                }
+                .faq-wrap {
+                    .faq-list {
+                        padding: 0 0 20px 34px;
+                        border-bottom: 1px solid #d9d9d9;
+                        .faq-q{
+                            font-family: $kr-font;
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 22px;
+                            letter-spacing: -.05em;
+                            color: $black-color;
+                            cursor: pointer;
+                            .faq-a {
+                                margin-top: 17px;
+                                width: 545px;
+                                font-family: $kr-font;
+                                font-weight: 600;
+                                font-size: 14px;
+                                line-height: 22px;
+                                letter-spacing: -.05em;
+                                color: #4f4f4f;
+                                // display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .news {
+                width: 50%;
+            }
+        }
+    }
 }
