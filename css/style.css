@@ -546,6 +546,11 @@ li {
 }
 #wrap .looks .container .looks-content-area .content li a .img-box img {
   width: 100%;
+  transition: all 0.4s ease-in-out;
+}
+#wrap .looks .container .looks-content-area .content li:hover a .img-box img {
+  width: 106%;
+  transition: all 0.4s ease-in-out;
 }
 #wrap .looks .container .looks-content-area .content li:not(:last-child) {
   margin-right: 20px;
