@@ -46,6 +46,7 @@ li {
   top: 0;
   z-index: 999;
   padding: 40px 0;
+  transition: all 0.4s ease-in-out;
 }
 #wrap header .container {
   display: flex;
@@ -67,6 +68,7 @@ li {
   font-size: 18px;
   line-height: 22px;
   color: #fff;
+  transition: all 0.4s ease-in-out;
 }
 #wrap header .container .menu-list li:not(:last-child) {
   margin-right: 30px;
@@ -82,12 +84,30 @@ li {
   justify-content: center;
   width: 30px;
   height: 30px;
+  transition: all 0.4s ease-in-out;
 }
 #wrap header .container .icon-list li a img {
   width: 100%;
 }
 #wrap header .container .icon-list li:not(:last-child) {
   margin-right: 30px;
+}
+#wrap header.fixed {
+  position: fixed;
+  padding: 20px 0;
+  transition: all 0.4s ease-in-out;
+}
+#wrap header.fixed .container .menu-list li a {
+  transition: all 0.4s ease-in-out;
+  color: #141415;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
+#wrap header.fixed .container .icon-list li a {
+  width: 28px;
+  height: 28px;
+  transition: all 0.4s ease-in-out;
 }
 #wrap .intro {
   width: 100%;
