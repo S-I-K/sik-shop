@@ -2,7 +2,6 @@ AOS.init();
 $(()=>{
     $('a').click(function(e){
         e.preventDefault();
-        console.log('clicked');
     });
 
     /* header scroll fixed */
@@ -12,6 +11,20 @@ $(()=>{
             $('header').addClass('fixed');
         }else{
             $('header').removeClass('fixed');
+        }
+    });
+
+    /* search btn click event */
+    $('.search-btn').click(function(e){
+        $('.search-wrap').toggleClass('show');
+    });
+
+    $(window).click(function(e){
+        // console.log(e.target);
+        if($(e.target).is('.search-wrap')){
+            $('.search-wrap').removeClass('show');
+        }else{
+            /* console.log('검색할거 없으면 배경을 클릭하세요.'); */
         }
     });
 
