@@ -55,6 +55,15 @@ li {
             .logo {
                 width: 150px;
                 border: 1px solid #000;
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    img {
+                        width: 100%;
+                    }
+                }
             }
             .menu-list {
                 display: flex;
@@ -651,52 +660,178 @@ li {
         align-items: center;
         justify-content: center;
         .container {
-            border: 1px solid red;
+            // border: 1px solid red;
             display: flex;
-            align-items: flex-end;
+            flex-direction: column;
+            align-items: flex-start;
             justify-content: center;
             height: 500px;
-            .faq {
+            .title {
                 width: 50%;
-                .title {
-                    font-family: $en-font;
-                    font-weight: 900;
-                    font-size: 48px;
-                    line-height: 59px;
-                    color: #5C734C;
-                    border-bottom: 2px solid #1b320a;
-                    margin-bottom: 20px;
-                }
-                .faq-wrap {
-                    .faq-list {
-                        padding: 0 0 20px 34px;
-                        border-bottom: 1px solid #d9d9d9;
-                        .faq-q{
-                            font-family: $kr-font;
-                            font-weight: 700;
-                            font-size: 18px;
-                            line-height: 22px;
-                            letter-spacing: -.05em;
-                            color: $black-color;
-                            cursor: pointer;
-                            .faq-a {
-                                margin-top: 17px;
-                                width: 545px;
+                padding: 0 20px 0 0;
+                font-family: $en-font;
+                font-weight: 900;
+                font-size: 48px;
+                line-height: 59px;
+                color: #5C734C;
+                // border-bottom: 2px solid #1b320a;
+            }
+            .faq-news-wrap {
+                // margin-top: 20px;
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                .faq {
+                    width: 50%;
+                    padding-top: 20px;
+                    border-top: 2px solid #1b320a;
+                    .faq-wrap {
+                        .faq-list {
+                            padding: 0 0 0px 34px;
+                            .faq-q{
+                                border-bottom: 1px solid #d9d9d9;
                                 font-family: $kr-font;
-                                font-weight: 600;
-                                font-size: 14px;
+                                font-weight: 700;
+                                font-size: 18px;
                                 line-height: 22px;
                                 letter-spacing: -.05em;
-                                color: #4f4f4f;
-                                // display: none;
+                                color: $black-color;
+                                padding-bottom: 16px;
+                                cursor: pointer;
+
+                                .faq-title {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    position: relative;
+                                    .plus-minus {
+                                        width: 12px;
+                                        height: 12px;
+                                        // border: 1px solid red;
+                                        position: absolute;
+                                        left: -20px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        span {
+                                            display: block;
+                                            width: 100%;
+                                            height: 2px;
+                                            background: #1B320A;
+                                            position: absolute;
+                                            transition: all .4s ease-in-out;
+                                        }
+                                        span:nth-child(1){}
+                                        span:nth-child(2){
+                                            transform: rotate(90deg);
+                                            animation: plus .4s forwards;
+                                        }
+                                    }
+                                }
+                                .faq-a {
+                                    margin-top: 17px;
+                                    padding: 0 0 0 10px;
+                                    width: 545px;
+                                    font-family: $kr-font;
+                                    font-weight: 600;
+                                    font-size: 14px;
+                                    line-height: 22px;
+                                    letter-spacing: -.05em;
+                                    color: #4f4f4f;
+                                    position: relative;
+                                    display: none;
+                                }
+                                .faq-a::before {
+                                    content: '';
+                                    display: block;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 4px;
+                                    height: 100%;
+                                    background: #1B320A;
+                                    position: absolute;
+                                }
+                            }
+                            .faq-q.show {
+                                .faq-title {
+                                    .plus-minus {
+                                        span:nth-child(2){
+                                            animation: minus .4s forwards;
+                                        }
+                                    }
+                                }
+                            }
+                            .faq-q:not(:last-child){
+                                margin-bottom: 20px;
                             }
                         }
                     }
                 }
-            }
-            .news {
-                width: 50%;
+                .news {
+                    width: 50%;
+                    // border: 1px solid red;
+                    height: 400px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    .bg-area {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        overflow: hidden;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .bg-area::after {
+                        content: '';
+                        position: absolute;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, .6);
+                        transition: all .4s ease-in-out;
+                    }
+                    .text-box {
+                        position: relative;
+                        z-index: 1;
+                        // border: 1px solid red;
+                        font-family: $en-font;
+                        font-weight: 900;
+                        font-size: 48px;
+                        line-height: 59px;
+                        color: #fff;
+                    }
+                }
+                .news:hover {
+                    .bg-area::after {
+                        background: rgba(0, 0, 0, .4);
+                        transition: all .4s ease-in-out;
+                    }
+                }
             }
         }
+    }
+}
+
+@keyframes plus {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-90deg);
+    }
+}
+@keyframes minus {
+    0% {
+        transform: rotate(-90deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }
