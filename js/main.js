@@ -1,3 +1,4 @@
+AOS.init();
 $(()=>{
     $('a').click(function(e){
         e.preventDefault();
