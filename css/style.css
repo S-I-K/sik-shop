@@ -84,6 +84,7 @@ li {
   margin-right: 30px;
 }
 #wrap header .container .icon-list {
+  width: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -907,3 +908,12 @@ li {
     transform: rotate(0deg);
   }
 }
+/* responsive css */
+/* html <= 1279px */
+@media (max-width: 1279px) {
+  #wrap .intro {
+    height: 600px;
+  }
+}
+/* html <= 769px */
+/* html <= 480px */

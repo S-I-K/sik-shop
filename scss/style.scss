@@ -85,7 +85,7 @@ li {
                 }
             }
             .icon-list {
-                // width: 150px;
+                width: 150px;
                 // border: 1px solid #000;
                 display: flex;
                 align-items: center;
@@ -999,4 +999,22 @@ li {
     100% {
         transform: rotate(0deg);
     }
+}
+
+/* responsive css */
+/* html <= 1279px */
+@media ( max-width: 1279px ) {
+    #wrap {
+        .intro {
+            height: 600px;
+        }
+    }
+}
+/* html <= 769px */
+@media ( max-width: 769px ) {
+
+}
+/* html <= 480px */
+@media ( max-width: 480px ) {
+
 }

@@ -3,14 +3,19 @@ $(()=>{
     $('a').click(function(e){
         e.preventDefault();
     });
-
     /* header scroll fixed */
     $(window).scroll(function(e){
         console.log($(window).scrollTop());
         if($(window).scrollTop() > 0) {
             $('header').addClass('fixed');
+            $('.search-btn > a > img').attr('src', './img/icon-search.svg');
+            $('.cart-btn > a > img').attr('src', './img/icon-cart.svg');
+            $('.login-btn > a > img').attr('src', './img/icon-login.svg');
         }else{
             $('header').removeClass('fixed');
+            $('.search-btn > a > img').attr('src', './img/icon-search-white.svg');
+            $('.cart-btn > a > img').attr('src', './img/icon-cart-white.svg');
+            $('.login-btn > a > img').attr('src', './img/icon-login-white.svg');
         }
     });
 
@@ -82,6 +87,10 @@ $(()=>{
         spaceBetween: 0,
         centeredSlides: true,
         speed: 1000,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
